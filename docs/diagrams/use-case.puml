@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+actor "Менеджер\n(товаровед)" as Manager
+actor "Кассир\n(продавец)" as Cashier
+
+rectangle "Система учета возвратов" {
+usecase "Регистрация в системе" as UC1
+usecase "Регистрация кассиров" as UC2
+usecase "Вход в систему" as UC3
+usecase "Оформление возврата" as UC4
+usecase "Обработка возврата" as UC5
+}
+
+Manager --> UC1
+Manager --> UC2
+Manager --> UC3
+Manager --> UC5
+Cashier --> UC3
+Cashier --> UC4
+
+UC4 ..> UC3 : <<include>>
+UC5 ..> UC3 : <<include>>
+@enduml
