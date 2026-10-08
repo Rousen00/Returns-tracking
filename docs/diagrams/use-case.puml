@@ -1,23 +1,35 @@
 @startuml
 left to right direction
-actor "Менеджер\n(товаровед)" as Manager
-actor "Кассир\n(продавец)" as Cashier
 
-rectangle "Система учета возвратов" {
-usecase "Регистрация в системе" as UC1
-usecase "Регистрация кассиров" as UC2
-usecase "Вход в систему" as UC3
-usecase "Оформление возврата" as UC4
-usecase "Обработка возврата" as UC5
+actor "Продавец\n(кассир)" as Cashier
+actor "Менеджер\n(товаровед)" as Manager
+
+rectangle "Система учёта возвратов товаров" {
+usecase "Вход в систему" as UC1
+usecase "Найти продажу (чек)" as UC2
+usecase "Оформить возврат" as UC3
+usecase "Указать причину возврата" as UC4
+usecase "Просмотреть список возвратов" as UC5
+usecase "Регистрация в системе" as UC6
+usecase "Регистрация кассиров" as UC7
+usecase "Проверить состояние товара" as UC8
+usecase "Принять решение\nпо возврату" as UC9
+usecase "Изменить остатки товара" as UC10
+usecase "Сформировать отчёт\nпо возвратам" as UC11
 }
 
-Manager --> UC1
-Manager --> UC2
-Manager --> UC3
-Manager --> UC5
+Cashier --> UC1
+Cashier --> UC2
 Cashier --> UC3
 Cashier --> UC4
+Cashier --> UC5
 
-UC4 ..> UC3 : <<include>>
-UC5 ..> UC3 : <<include>>
+Manager --> UC1
+Manager --> UC5
+Manager --> UC6
+Manager --> UC7
+Manager --> UC8
+Manager --> UC9
+Manager --> UC10
+Manager --> UC11
 @enduml
