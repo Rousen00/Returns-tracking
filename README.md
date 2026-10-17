@@ -57,7 +57,6 @@ python src/main.py
 
 В проекте используется **SQLite** (файл `db/returns.db`, создаётся скриптом `db/init_db.py`).
 
-![ER-диаграмма](docs/diagrams/er-diagram.png)
 
 | Таблица | Назначение |
 |---------|------------|
@@ -68,6 +67,7 @@ python src/main.py
 | returns | Возвраты и их статус |
 | return_items | Позиции возврата |
 
+SQL-схема лежит в файле `db/schema.sql` (создание таблиц и тестовые данные).
 Создание базы: `python db/init_db.py`
 Подробнее о Markdown: [документация GitHub](https://docs.github.com/ru/get-started/writing-on-github)
 
