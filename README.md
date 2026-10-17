@@ -54,11 +54,6 @@ python src/main.py
 
 ![Блок-схема обработки возврата](docs/images/flowchart_manager.png)
 ## База данных
-
-В проекте используется **SQLite** (файл `db/returns.db`, создаётся скриптом `db/init_db.py`).
-
-![ER-диаграмма](docs/diagrams/er-diagram.jpg
-)
 | Таблица | Назначение |
 |---------|------------|
 | users | Кассиры и менеджеры |
@@ -67,6 +62,11 @@ python src/main.py
 | sale_items | Позиции чека |
 | returns | Возвраты и их статус |
 | return_items | Позиции возврата |
+
+## ER-диаграмма
+![ER-диаграмма](docs/diagrams/er-diagram.jpg
+)
+
 
 Подробнее о Markdown: [документация GitHub](https://docs.github.com/ru/get-started/writing-on-github)
 
