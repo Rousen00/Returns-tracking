@@ -54,8 +54,12 @@ python src/main.py
 
 ![Блок-схема обработки возврата](docs/images/flowchart_manager.png)
 ## База данных
+
+В проекте используется **SQLite**: файл `db/returns.db`, структура и тестовые данные описаны в `db/schema.sql`.
+
 | Таблица | Назначение |
 |---------|------------|
+| user_roles | Роли пользователей (кассир, менеджер) |
 | users | Кассиры и менеджеры |
 | products | Товары и остатки |
 | sales | Продажи (чеки) |
@@ -64,11 +68,12 @@ python src/main.py
 | return_items | Позиции возврата |
 
 ## ER-диаграмма
-![ER-диаграмма](docs/diagrams/er-diagram.jpg
-)
 
+![ER-диаграмма](docs/diagrams/er-diagram.jpg)
+
+Создание базы: `python db/init_db.py`
 
 Подробнее о Markdown: [документация GitHub](https://docs.github.com/ru/get-started/writing-on-github)
 
 ---
-<!-- *Автор: Маштаков Никита Александрович, группа 26-ИВТ-2-1* -->
+*Автор: Маштаков Никита Александрович, группа 26-ИВТ-2-1*
