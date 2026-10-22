@@ -8,8 +8,7 @@ rectangle "Система учёта возвратов товаров" {
 usecase "Вход в систему" as UC1
 usecase "Найти продажу (чек)" as UC2
 usecase "Оформить возврат" as UC3
-usecase "Указать причину возврата" as UC4
-usecase "Просмотреть список возвратов" as UC5
+usecaSQLite IntelliViewse "Просмотреть список возвратов" as UC5
 usecase "Регистрация в системе" as UC6
 usecase "Регистрация кассиров" as UC7
 usecase "Проверить состояние товара" as UC8

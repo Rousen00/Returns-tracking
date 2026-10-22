@@ -99,9 +99,9 @@ VALUES
 
 INSERT INTO users (surname, name, patronymic, login, password_hash, role_id)
 VALUES
-    ('Иванова', 'Анна', 'Сергеевна', 'ivanova', 'hash_1234', 1),
-    ('Петров', 'Олег', 'Иванович', 'petrov', 'hash_1234', 1),
-    ('Смирнов', 'Павел', 'Андреевич', 'smirnov', 'hash_admin', 2);
+    ('Иванова', 'Анна', 'Сергеевна', 'ivanova', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1),
+    ('Петров', 'Олег', 'Иванович', 'petrov', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 1),
+    ('Смирнов', 'Павел', 'Андреевич', 'smirnov', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 2);
 
 INSERT INTO products (name, price, stock_qty)
 VALUES
@@ -111,21 +111,23 @@ VALUES
 
 INSERT INTO sales (receipt_number, sale_date, cashier_id)
 VALUES
-    ('CHK-0001', '2026-10-01', 1),
-    ('CHK-0002', '2026-10-03', 2);
+    ('CHK-0001', date('now', '-5 days'), 1),
+    ('CHK-0002', date('now', '-3 days'), 2),
+    ('CHK-0003', date('now', '-60 days'), 1);
 
 INSERT INTO sale_items (sale_id, product_id, quantity, price)
 VALUES
     (1, 1, 1, 4500.00),
     (1, 2, 2, 1200.00),
-    (2, 3, 1, 3200.00);
+    (2, 3, 1, 3200.00),
+    (3, 2, 1, 1200.00);
 
 INSERT INTO returns (sale_id, cashier_id, manager_id, return_date, reason, status, refund_amount)
 VALUES
-    (1, 1, 3, '2026-10-05', 'Не подошёл размер', 'Выполнен', 4500.00),
-    (2, 2, NULL, '2026-10-06', 'Брак: порвана молния', 'Новый', NULL);
+    (1, 1, 3, date('now', '-4 days'), 'Не подошёл размер', 'Выполнен', 4500.00),
+    (2, 2, NULL, date('now', '-2 days'), 'Брак: порвана молния', 'Новый', NULL);
 
 INSERT INTO return_items (return_id, sale_item_id, quantity, is_good_condition, restock)
 VALUES
     (1, 1, 1, 1, 1),
-    (2, 3, 1, 0, 0);
+    (2, 3, 1, NULL, NULL);
