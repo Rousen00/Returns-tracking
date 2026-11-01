@@ -7,7 +7,7 @@ entity "users\n(Пользователи)" as users {
 --
   * full_name : TEXT
   * login : TEXT
-  * password : TEXT
+  * password_hach : TEXT
   * role : TEXT
 }
 
@@ -54,7 +54,6 @@ entity "return_items\n(Позиции возврата)" as return_items {
   * return_id : INTEGER <<FK>>
   * sale_item_id : INTEGER <<FK>>
   * quantity : INTEGER
-is_good_condition : INTEGER
 restock : INTEGER
 }
 

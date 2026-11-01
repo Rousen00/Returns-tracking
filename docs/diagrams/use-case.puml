@@ -17,18 +17,18 @@ usecase "Изменить остатки товара" as UC10
 usecase "Сформировать отчёт\nпо возвратам" as UC11
 }
 
-Cashier --> UC1
-Cashier --> UC2
-Cashier --> UC3
-Cashier --> UC4
-Cashier --> UC5
+Cashier -- UC1
+Cashier -- UC2
+Cashier -- UC3
+Cashier -- UC4
+Cashier -- UC5
 
-Manager --> UC1
-Manager --> UC5
-Manager --> UC6
-Manager --> UC7
-Manager --> UC8
-Manager --> UC9
-Manager --> UC10
-Manager --> UC11
+Manager -- UC1
+Manager -- UC5
+Manager -- UC6
+Manager -- UC7
+Manager -- UC8
+Manager -- UC9
+Manager -- UC10
+Manager -- UC11
 @enduml
