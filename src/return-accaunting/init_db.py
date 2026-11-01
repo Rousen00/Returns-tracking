@@ -1,8 +1,9 @@
 import sqlite3
 from pathlib import Path
 
+
 BASE_DIR = Path(__file__).parent
-DB_PATH = BASE_DIR / "returns.db"
+from database import DB_PATH
 SCHEMA_PATH = BASE_DIR / "schema.sql"
 
 TABLES = (
@@ -26,11 +27,11 @@ def init_db():
 
         for table in TABLES:
             count = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
-            print(f"{table}: {count} записей")
+#            print(f"{table}: {count} записей")
     finally:
         conn.close()
 
-    print(f"База данных создана: {DB_PATH}")
+#    print(f"База данных создана: {DB_PATH}")
 
 
 if __name__ == "__main__":
