@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent
-from database import DB_PATH
+DB_PATH = BASE_DIR / "returns.db"
 SCHEMA_PATH = BASE_DIR / "schema.sql"
 
 TABLES = (
