@@ -1,0 +1,3 @@
+﻿return_id,sale_id,cashier_id,manager_id,return_date,reason,status,refund_amount,sale.sale_id,sale.receipt_number,sale.sale_date,cashier.user_id,cashier.surname,cashier.name,cashier.patronymic,manager.user_id,manager.surname,manager.name,manager.patronymic
+1,1,1,3,2026-11-15,Не подошёл размер,Выполнен,4500.0,1,CHK-0001,2026-11-14,1,Иванова,Анна,Сергеевна,3,Смирнов,Павел,Андреевич
+2,2,2,,2026-11-17,Брак: порвана молния,Новый,,2,CHK-0002,2026-11-16,2,Петров,Олег,Иванович,,,,
